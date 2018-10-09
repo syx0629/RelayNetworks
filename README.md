@@ -9,7 +9,8 @@ Steps:
 Training:
 
 1) Hopper Example
-  mpirun -np 1 python -m train_relay --env=DartHopper-v1
+
+mpirun -np 1 python -m train_relay --env=DartHopper-v1
  
 Test : 
 python test_policy.py 2
