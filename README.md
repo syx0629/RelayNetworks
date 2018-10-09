@@ -7,11 +7,12 @@ Steps:
 
 
 Training:
+
 1) Hopper Example
   mpirun -np 1 python -m train_relay --env=DartHopper-v1
  
 Test : 
-python test_relay.py 2
+python test_policy.py 2
 
 The argument here specifies the number of nodes in the relay. For example if there are 3 nodes in the relay chain, you would do
-python test_relay.py 3
+python test_policy.py 3
