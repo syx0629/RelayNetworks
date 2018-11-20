@@ -522,7 +522,7 @@ class RelayFunctions(object):
 		GradientSteps = 0
 		W = weight# make this a tunable parameter
 		while notdone:
-			grads = sess.run(dV_ds,feed_dict={ob:state.reshape(1,dim)})
+			#grads = sess.run(dV_ds,feed_dict={ob:state.reshape(1,dim)})
 			#print("grads",grads)
 			grad = self.getGrad(state)
 			heuristicGrad = W*2*(goal_state - state.reshape(dim,))
