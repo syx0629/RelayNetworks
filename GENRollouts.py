@@ -475,11 +475,11 @@ class RelayFunctions(object):
 		dx = []
 		for i in range(state.shape[0]):
 			x = state.reshape(1,self.env.observation_space.shape[0])
-			x[0,i]+=0.05
+			x[0,i]+=0.01
 			dx1 = self.regressor.predict(x)
-			x[0,i]-=0.10
+			x[0,i]-=0.02
 			dx2 = self.regressor.predict(x)
-			diff = dx1[0]-dx2[0]
+			diff = dx1[0]-dx2[0]/0.02
 			if i >= 2:
 				diff = 0.
 			dx.append(diff)
